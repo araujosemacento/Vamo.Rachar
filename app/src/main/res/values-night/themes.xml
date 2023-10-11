@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.VamoRachar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primaryNight</item>
+        <item name="colorPrimaryVariant">@color/accentNight</item>
+        <item name="colorOnPrimary">@color/textNight</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondaryNight</item>
+        <item name="colorSecondaryVariant">@color/accentNight</item>
+        <item name="colorOnSecondary">@color/backgroundNight</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>

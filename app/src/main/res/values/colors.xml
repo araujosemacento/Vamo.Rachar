@@ -7,14 +7,14 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="primary">#92AAD3</color>
+    <color name="primary">#B3C3E0</color>
     <color name="secondary">#BFD2F7</color>
-    <color name="accent">#40619C</color>
+    <color name="accent">#314C77</color>
     <color name="text">#22071F</color>
     <color name="background">#D9E2F2</color>
-    <color name="primaryNight">#2C446D</color>
+    <color name="primaryNight">#293F65</color>
     <color name="secondaryNight">#081B40</color>
-    <color name="accentNight">#6385BF</color>
+    <color name="accentNight">#9AAFD6</color>
     <color name="textNight">#F8DDF5</color>
     <color name="backgroundNight">#0D1626</color>
 </resources>

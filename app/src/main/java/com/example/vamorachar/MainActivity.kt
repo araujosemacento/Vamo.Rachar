@@ -35,11 +35,15 @@ class MainActivity : AppCompatActivity() {
             calculateAndDisplayResult(editTextNumber, editTextNumberDecimal, textView2)
         }
 
-        tts = TextToSpeech(this) { status ->
-            if (status != TextToSpeech.ERROR) {
-                tts.language = Locale("pt", "BR")
-            }
-        }
+        tts =
+                TextToSpeech(this) { status ->
+                    if (status != TextToSpeech.ERROR) {
+                        val locale =
+                                if (Locale.getDefault().language == "pt") Locale("pt", "BR")
+                                else Locale.US
+                        tts.language = locale
+                    }
+                }
 
         imageButton2.setOnClickListener {
             val textToSpeak = "${textView3.text} ${textView2.text}"
@@ -47,18 +51,23 @@ class MainActivity : AppCompatActivity() {
         }
 
         imageButton4.setOnClickListener {
-            val sendIntent: Intent = Intent().apply {
-                action = Intent.ACTION_SEND
-                putExtra(Intent.EXTRA_TEXT, "${textView3.text} ${textView2.text}")
-                type = "text/plain"
-            }
+            val sendIntent: Intent =
+                    Intent().apply {
+                        action = Intent.ACTION_SEND
+                        putExtra(Intent.EXTRA_TEXT, "${textView3.text} ${textView2.text}")
+                        type = "text/plain"
+                    }
 
             val shareIntent = Intent.createChooser(sendIntent, null)
             startActivity(shareIntent)
         }
     }
 
-    private fun calculateAndDisplayResult(editTextNumber: EditText, editTextNumberDecimal: EditText, textView2: TextView) {
+    private fun calculateAndDisplayResult(
+            editTextNumber: EditText,
+            editTextNumberDecimal: EditText,
+            textView2: TextView
+    ) {
         val num1 = editTextNumber.text.toString().toDoubleOrNull() ?: return
         val num2 = editTextNumberDecimal.text.toString().toDoubleOrNull() ?: return
         val result = num1 / num2

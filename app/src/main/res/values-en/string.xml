@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Let\'s Split!</string>
+    <string name="valor">Total amount to be paid:</string>
+    <string name="pessoas">Number of people who will pay:</string>
+    <string name="label">Amount to be paid by each person:</string>
+</resources>
